@@ -1,0 +1,12 @@
+<?php /** @var \Perspective\CurrencyTransfer\Block\Custom $block */?>
+<?php
+$id = '276';
+$_product = $block->getProductById($id);
+
+$imageId = 'product_base_image';
+$width = 250;
+$height = 500;
+
+$resizedImageUrl = $block->resizeImage($_product, 'product_base_image', $width, $height)->getUrl();
+?>
+<img src="<?php echo $resizedImageUrl;?>" alt="<?php echo $_product->getTitle();?>" />
